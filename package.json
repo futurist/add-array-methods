@@ -4,7 +4,8 @@
   "description": "Add custom array methods that can chainable, like subclass Array, but not modify Array.prototype, works in ES3+",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "cover": "nyc --reporter=lcov npm test"
   },
   "repository": {
     "type": "git",
