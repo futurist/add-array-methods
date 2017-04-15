@@ -4,7 +4,7 @@
   "description": "Add custom array methods that can chainable, like subclass Array, but not modify Array.prototype",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/futurist/add-array-methods/issues"
   },
-  "homepage": "https://github.com/futurist/add-array-methods#readme"
+  "homepage": "https://github.com/futurist/add-array-methods#readme",
+  "devDependencies": {
+    "ava": "^0.19.1"
+  }
 }

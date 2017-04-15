@@ -25,4 +25,8 @@ function addArrayMethods (customMethods) {
   }
 }
 
-module.exports = addArrayMethods
+function bindArray(arr, methods){
+  arr._addArrayMethods = addArrayMethods(methods)
+  arr._addArrayMethods(arr)
+}
+module.exports = bindArray
