@@ -1,7 +1,8 @@
-function addArrayMethods (customMethods) {
+function addArrayMethods (customMethods, options) {
+  options = options || {}
   var method
   var allMethods = {}
-  var nativeMethods = [
+  var nativeMethods = options.natives || [
     'filter', 'slice', 'concat',
     'reverse', 'sort', 'splice',
     'map', 'fill', 'copyWithin'
@@ -16,17 +17,19 @@ function addArrayMethods (customMethods) {
   for (method in customMethods) {
     allMethods[method] = customMethods[method]
   }
-  return function (arr) {
-    arr._addArrayMethods = this._addArrayMethods
+  return function adder (arr) {
+    allMethods._addArrayMethods = adder
     for (method in allMethods) {
-      arr[method] = allMethods[method]
+      if (options.es3) {
+        arr[method] = allMethods[method]
+      } else {
+        Object.defineProperty(arr, method, {
+          value: allMethods[method]
+        })
+      }
     }
     return arr
   }
 }
 
-function bindArray(arr, methods){
-  arr._addArrayMethods = addArrayMethods(methods)
-  arr._addArrayMethods(arr)
-}
-module.exports = bindArray
+module.exports = addArrayMethods
