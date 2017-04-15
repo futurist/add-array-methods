@@ -1,6 +1,6 @@
 {
   "name": "add-array-methods",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Add custom array methods that can chainable, like subclass Array, but not modify Array.prototype, works in ES3+",
   "main": "index.js",
   "scripts": {
