@@ -1,6 +1,11 @@
 # add-array-methods
 Add custom array methods that can chainable, like subclass Array, but not modify Array.prototype, works in ES3+
 
+[![npm](https://img.shields.io/npm/v/add-array-methods.svg "Version")](https://www.npmjs.com/package/add-array-methods)
+[![Build Status](https://travis-ci.org/futurist/add-array-methods.svg?branch=master)](https://travis-ci.org/futurist/add-array-methods)
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
+
 ## Install
 
 - NPM
