@@ -3,7 +3,7 @@ Add custom array methods that can chainable, like subclass Array, but not modify
 
 [![npm](https://img.shields.io/npm/v/add-array-methods.svg "Version")](https://www.npmjs.com/package/add-array-methods)
 [![Build Status](https://travis-ci.org/futurist/add-array-methods.svg?branch=master)](https://travis-ci.org/futurist/add-array-methods)
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
 ## Install
