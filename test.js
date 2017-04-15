@@ -67,3 +67,17 @@ test('override default natives', t => {
   t.is(myArr.hasOwnProperty('sort'), false)
 })
 
+test('without default natives', t => {
+  delete addArraymethods.natives
+  var myArr = [1, 2, -3, 4, 3]
+  addArraymethods({
+    last: function () {
+      return this[this.length - 1]
+    }
+  })(myArr)
+
+  t.is(myArr.hasOwnProperty('last'), true)
+  t.is(myArr.hasOwnProperty('filter'), false)
+  t.is(myArr.hasOwnProperty('sort'), false)
+})
+

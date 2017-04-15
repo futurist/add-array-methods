@@ -32,6 +32,7 @@ The result is, the `last` methods will always available, even after all **native
 
 ``` javascript
 assert.equal(Array.prototype.last, undefined)
+
 myArr.filter(v=>v > 2).sort().last()
 ```
 
@@ -53,7 +54,9 @@ When set to `true`, using direct methods assign instead of `Object.definePropert
 >    'map', 'fill', 'copyWithin'
 >  ]
 
-Native methods will copy from `Array.prototype`, to `arr`
+This default value holds in `addArrayMethods.natives`
+
+Native methods will copy from `Array.prototype`, to `arr`, when create new array wrapper
 
 #### yourMethods = object
 
@@ -71,4 +74,8 @@ The object format is:
 
 **yourMethods** can overwrite native functions with same method name
 
+
+### addArrayMethods.natives
+
+This property hold the default natives array values, change it will affect all upcoming instance of **addArrayMethods**
 
